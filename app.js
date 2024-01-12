@@ -131,6 +131,13 @@ function displayQuestion() {
       </p>
       `;
     }
+
+    resultContainer.innerHTML = `
+    <p>
+    You scored ${score} out of ${questionBank.length}
+    </p>
+    <p>Incorrect Answer:</p>${incorrectAnswerHTML}
+    `;
   }
   submitButton.addEventListener("click", checkAnswer);
   retryButton.addEventListener("click", retryQuiz);
